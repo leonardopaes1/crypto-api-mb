@@ -1,12 +1,11 @@
 # values.yaml
+appName: 
 environment: prod
-
 replicaCount: 2
 
 image:
-  repository: ""
-  tag: ""
-  pullPolicy: IfNotPresent
+  repository: 
+  tag: 
 
 service:
   type: LoadBalancer
@@ -14,3 +13,4 @@ service:
 
 nodeSelector:
   prod: prod-pool
+

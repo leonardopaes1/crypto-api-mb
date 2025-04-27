@@ -2,11 +2,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: crypto-api
+  name: {{ include "app.name" . }}
+  labels:
+    {{ include "app.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   selector:
-    app: crypto-api
+    app: {{ include "app.name" . }}
   ports:
     - protocol: TCP
       port: {{ .Values.service.port }}
