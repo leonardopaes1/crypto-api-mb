@@ -1,0 +1,16 @@
+# values-staging.yaml
+environment: staging
+
+replicaCount: 2
+
+image:
+  repository: ""
+  tag: ""
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+  port: 80
+
+nodeSelector:
+  pool: staging-pool

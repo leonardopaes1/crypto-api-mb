@@ -1,0 +1,16 @@
+# values.yaml
+environment: prod
+
+replicaCount: 2
+
+image:
+  repository: ""
+  tag: ""
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+  port: 80
+
+nodeSelector:
+  prod: prod-pool
