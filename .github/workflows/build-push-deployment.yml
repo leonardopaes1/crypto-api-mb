@@ -117,7 +117,7 @@ jobs:
           exit 1
         fi
 
-    - name: Deploy with Helm (Dry-run for PRs)
+    - name: Deploy with Helm (prod)
       if: ${{ env.RELEASE == 'prod' }}
       run: |
         helm upgrade --install $HELM_RELEASE ./helm/crypto-api \
@@ -130,7 +130,7 @@ jobs:
           --set service.port=$SERVICE_PORT \
           --set nodeSelector.pool=$RELEASE-pool
 
-    - name: Deploy with Helm (Real deploy)
+    - name: Deploy with Helm (staging)
       if: ${{ env.RELEASE == 'staging' }}
       run: |
         helm upgrade --install $HELM_RELEASE ./helm/crypto-api \
