@@ -1,0 +1,38 @@
+# templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crypto-api
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: crypto-api
+  template:
+    metadata:
+      labels:
+        app: crypto-api
+    spec:
+      nodeSelector:
+        cloud.google.com/gke-nodepool: {{ index .Values.nodeSelector .Values.environment }}
+      tolerations:
+        - key: "env"
+          operator: "Equal"
+          value: {{ .Values.environment }}
+          effect: "NoSchedule"
+      dnsPolicy: Default
+      dnsConfig:
+        nameservers:
+          - 8.8.8.8
+          - 8.8.4.4
+      containers:
+        - name: crypto-api
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+          ports:
+            - containerPort: 8080
+          env:
+            - name: ENVIRONMENT
+              value: {{ .Values.environment }}
+
+
+
