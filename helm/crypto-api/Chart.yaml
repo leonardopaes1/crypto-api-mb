@@ -3,5 +3,4 @@ name: crypto-api
 version: 0.1.0
 description: Helm chart to deploy the Crypto API application.
 
-# Optional fields
 appVersion: "1.0.0"

@@ -1,12 +1,11 @@
 # values-staging.yaml
+appName: 
 environment: staging
-
 replicaCount: 2
 
 image:
-  repository: ""
-  tag: ""
-  pullPolicy: IfNotPresent
+  repository: 
+  tag: 
 
 service:
   type: LoadBalancer

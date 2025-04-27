@@ -126,7 +126,6 @@ jobs:
           --set replicaCount=$REPLICA_COUNT \
           --set image.repository=$DOCKER_USERNAME/$DOCKER_REPO \
           --set image.tag=$IMAGE_TAG \
-          --set image.pullPolicy=IfNotPresent \
           --set service.type=LoadBalancer \
           --set service.port=$SERVICE_PORT \
           --set nodeSelector.pool=$RELEASE-pool
@@ -140,7 +139,6 @@ jobs:
           --set replicaCount=$REPLICA_COUNT \
           --set image.repository=$DOCKER_USERNAME/$DOCKER_REPO \
           --set image.tag=$IMAGE_TAG \
-          --set image.pullPolicy=IfNotPresent \
           --set service.type=LoadBalancer \
           --set service.port=$SERVICE_PORT \
           --set nodeSelector.pool=$RELEASE-pool
