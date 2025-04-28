@@ -104,6 +104,24 @@ Resposta esperada:
 
 ---
 
+## 🚀 Caso Queira Executar Local
+
+Para executar localmente precisa estar logado no google com o ``gcloud auth login`` e executar o comando abaixo substituindo os valores que estão entre <> pelos valores desejados.
+
+```bash
+helm upgrade --install <Nome para o helm> ./helm/crypto-api \
+          --namespace <Namespace> --create-namespace \
+          --set environment=<enviroument> \
+          --set replicaCount=<Número de replicas> \
+          --set image.repository=<Caminho da imagem no Docker hub> \
+          --set image.tag=<Tag da imagem> \
+          --set service.type=LoadBalancer \
+          --set service.port=<Porta de exposição do serviço> \
+          --set nodeSelector.pool=<prod ou staging>-pool
+```
+
+---
+
 ## 📋 Decisões Técnicas
 
 - Go mod para gestão de dependências
