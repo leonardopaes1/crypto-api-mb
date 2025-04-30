@@ -145,9 +145,3 @@ helm upgrade --install <Nome para o helm> ./helm/crypto-api \
 ## 📄 Licença
 
 Este projeto é open-source para fins de estudo e demonstração de habilidades DevOps/SRE.
-
-<<<<<<< HEAD
---- 
-=======
---- 
->>>>>>> 1089e75469f6b534041d292f7c409f80add99b8b
