@@ -29,7 +29,7 @@ Provisionamento da infraestrutura está disponível aqui:
 
 ### Exemplos de Pares de Criptomoedas (Sugestões para Testes)
 
-Aqui estão algumas sugestões de siglas de criptomoedas que você pode consultar na API:
+Aqui estão algumas sugestões de siglas (ticker/simbolo) de criptomoedas que você pode consultar na API:
 
 | **Par** | **Descrição**             |
 |:--------|:---------------------------|
