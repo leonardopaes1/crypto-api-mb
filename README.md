@@ -63,7 +63,7 @@ Resposta esperada:
       "sell": "538907.00000000",
       "open": "540127.00000000",
       "date": 1745777208,
-      "pair": "BTC"
+      "pair": "BRLBTC"
     }
   ]
 }
@@ -146,4 +146,8 @@ helm upgrade --install <Nome para o helm> ./helm/crypto-api \
 
 Este projeto é open-source para fins de estudo e demonstração de habilidades DevOps/SRE.
 
+<<<<<<< HEAD
 --- 
+=======
+--- 
+>>>>>>> 1089e75469f6b534041d292f7c409f80add99b8b
