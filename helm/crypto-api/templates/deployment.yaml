@@ -32,4 +32,4 @@ spec:
             - containerPort: 8080
           env:
             - name: ENVIRONMENT
-              value: {{ .Values.environment }}
+              value: "{{ .Values.environment }}"

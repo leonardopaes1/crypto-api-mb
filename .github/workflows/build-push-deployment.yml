@@ -105,8 +105,12 @@ jobs:
       id: vars
       run: |
         if [[ $GITHUB_REF == refs/tags/* ]]; then
+          TAG=${GITHUB_REF#refs/tags/}
+          echo "IMAGE_TAG=$TAG" >> $GITHUB_ENV
           echo "RELEASE=prod" >> $GITHUB_ENV
         elif [[ $GITHUB_REF == refs/heads/staging ]]; then
+          TAG=${GO_VERSION}-${GITHUB_SHA::7}
+          echo "IMAGE_TAG=$TAG" >> $GITHUB_ENV
           echo "RELEASE=staging" >> $GITHUB_ENV
         else
           echo "Branch não reconhecida para deploy."
