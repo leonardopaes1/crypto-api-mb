@@ -12,14 +12,15 @@ import (
 // Estruturas para receber o JSON da API externa
 type TickerData struct {
 	Ticker struct {
-		High string `json:"high"`
-		Low  string `json:"low"`
-		Vol  string `json:"vol"`
-		Last string `json:"last"`
-		Buy  string `json:"buy"`
-		Sell string `json:"sell"`
-		Open string `json:"open"`
-		Date int64  `json:"date"`
+		High  string `json:"high"`
+		Low   string `json:"low"`
+		Vol   string `json:"vol"`
+		Last  string `json:"last"`
+		Buy   string `json:"buy"`
+		Sell  string `json:"sell"`
+		Open  string `json:"open"`
+		Date  int64  `json:"date"`
+		Pair2 string `json:"pair"`
 	} `json:"ticker"`
 }
 
@@ -97,7 +98,7 @@ func main() {
 					Sell: tickerData.Ticker.Sell,
 					Open: tickerData.Ticker.Open,
 					Date: tickerData.Ticker.Date,
-					Pair: pair,
+					Pair: tickerData.Ticker.Pair2,
 				},
 			},
 		}

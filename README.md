@@ -63,7 +63,7 @@ Resposta esperada:
       "sell": "538907.00000000",
       "open": "540127.00000000",
       "date": 1745777208,
-      "pair": "BTC"
+      "pair": "BRLBTC"
     }
   ]
 }
